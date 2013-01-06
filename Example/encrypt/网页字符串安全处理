@@ -1,0 +1,21 @@
+text：
+	js[json中]	替换 & ' ", < > 可选
+	php：		替换 ' " < >，再addslashes
+	
+url:
+	单个：无需处理
+	多个：用json
+	
+json传到php端：可能"会被打上\
+
+html:
+	Base64加密仍数据库
+
+function remove_magic_quotes_gpc($content){
+	if (get_magic_quotes_gpc()) {
+		return stripslashes($content);
+	}
+	else{
+		return $content;
+	}
+}

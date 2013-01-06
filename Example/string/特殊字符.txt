@@ -1,0 +1,30 @@
+﻿htmlspecialchars()
+'&' (ampersand) becomes '&amp;' 
+'"' (double quote) becomes '&quot;' when ENT_NOQUOTES is not set. 
+''' (single quote) becomes '&#039;' only when ENT_QUOTES is set. 
+'<' (less than) becomes '&lt;' 
+'>' (greater than) becomes '&gt;' 
+
+'\' &#92;
+
+
+htmlentities()	html_entity_decode()
+所有字符都转成HTML格式
+除上面htmlspecialchars字符外，还包括双字节字符显示成编码等。
+ 
+ 
+ 
+addslashes()	stripslashes()
+单引号(')、双引号(")、反斜线backslash (\) 以及空字符NULL。
+ 
+ 
+quotemeta()
+. \\ + * ? [ ^ ] ( $ ) 加反斜杠
+
+nl2br()
+将换行字符转成<br>
+ 
+strip_tags
+去掉HTML及PHP标记
+去掉字符串中任何HTML标记和PHP标记，包括标记封堵之间的内容。
+注意如果字符串HTML及PHP标签存在错误，也会返回错误。
